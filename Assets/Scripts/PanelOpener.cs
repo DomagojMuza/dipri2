@@ -14,4 +14,12 @@ public class PanelOpener : MonoBehaviour
             Panel.SetActive(!isActive);
         }
     }
+
+    public void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.I))
+        {
+            OpenPanel();
+        }
+    }
 }

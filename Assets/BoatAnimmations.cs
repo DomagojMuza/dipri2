@@ -13,7 +13,7 @@ public class BoatAnimmations : MonoBehaviour
     }
     private void Update()
     {
-        transform.position = Vector3.Lerp(transform.position, finalPosition, 0.1f);
+        transform.position = Vector3.Lerp(transform.position, finalPosition, 0.01f);
     }
     private void OnDisable()
     {
