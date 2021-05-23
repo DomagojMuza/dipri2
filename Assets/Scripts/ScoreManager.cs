@@ -13,6 +13,7 @@ public class ScoreManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        int g = Player.MyInstance.MyGoldAmount;
         text.text = Player.MyInstance.MyGoldAmount.ToString();
         if(instance == null)
         {

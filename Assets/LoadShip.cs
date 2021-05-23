@@ -8,7 +8,7 @@ public class LoadShip : MonoBehaviour
     public GameObject[] shipPrefabs;
     public Transform spawnPoint;
 
-    private void Start()
+    private void Awake()
     {
         int selectedShip = PlayerPrefs.GetInt("selectedShip");
         GameObject prefab = shipPrefabs[selectedShip];

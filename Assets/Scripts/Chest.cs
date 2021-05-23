@@ -11,7 +11,6 @@ public class Chest : MonoBehaviour
     {
         gold = Random.Range(100, 3000);
         GetComponent<AudioSource>().playOnAwake = false;
-        GetComponent<AudioSource>().clip = saw;
     }
 
     public void OnTriggerEnter(Collider other)
@@ -21,6 +20,7 @@ public class Chest : MonoBehaviour
         {
             other.GetComponent<Player>().AddGold(gold);
             AudioSource.PlayClipAtPoint(saw, transform.position);
+            GetComponent<AudioSource>().Play();
             Destroy(gameObject);
         }
     }
