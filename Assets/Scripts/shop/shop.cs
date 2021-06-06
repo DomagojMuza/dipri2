@@ -13,8 +13,8 @@ public class shop : MonoBehaviour
     public CannonController cannon2;
     public Button button1;
     public Button button2;
-
     public Button button3;
+    public Button button4;
     public Button button5;
     public Button button6;
     public Button button7;
@@ -29,7 +29,8 @@ public class shop : MonoBehaviour
         WaterBoat = MyPlayer.GetComponent<WaterBoat>();
         button1.onClick.AddListener(() => BuyDmgSmall());
         button2.onClick.AddListener(() => BuyHPSmall());
-        button3.onClick.AddListener(() => BuyManeuverability());
+        button3.onClick.AddListener(() => AddSpeed());
+        button4.onClick.AddListener(() => BuyManeuverability());
         button5.onClick.AddListener(() => BuyHPBig());
         button6.onClick.AddListener(() => AddGoldFromLuttery());
         button7.onClick.AddListener(() => BuyDmgBig());
@@ -40,6 +41,14 @@ public class shop : MonoBehaviour
     {
         
         
+    }
+
+    void AddSpeed(){
+        if(MyPlayer.goldAmount >= 40000){
+            MyPlayer.goldAmount -= 40000;
+            ScoreManager.instance.ChangeCoinsScore(MyPlayer.goldAmount);
+            MyPlayer.GetComponent<WaterBoat>().MaxSpeed += 200;
+        }
     }
 
     void BuyManeuverability()
@@ -97,15 +106,6 @@ public class shop : MonoBehaviour
         
     }
 
-    void AddSpeed()
-    {
-        if(MyPlayer.goldAmount >= 40000){
-            MyPlayer.goldAmount -= 40000;
-            ScoreManager.instance.ChangeCoinsScore(MyPlayer.goldAmount);
-            WaterBoat.MaxSpeed +=10f;
-        }
-        
-    }
 
     void AddGoldFromLuttery()
     {
