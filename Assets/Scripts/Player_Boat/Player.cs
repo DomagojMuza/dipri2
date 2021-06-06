@@ -39,21 +39,23 @@ public class Player : MonoBehaviour
     public void AddGold(int goldAmount)
     {
         MyGoldAmount += goldAmount;
-        CheckGoldQuests(goldAmount);
         ScoreManager.instance.ChangeCoinsScore(MyGoldAmount);
+        CheckQuest(goldAmount, "Gold");
+        
     }
 
-    public void CheckGoldQuests(int gold)
+    public void CheckQuest(int addAmount, string typeOfObject)
     {
+        Debug.Log(addAmount + " "+ typeOfObject);
         foreach (Quest quest in QuestLog.MyInstance.quests)
         {
             if (quest.MyComplete == false)
             {
                 foreach (Objective obj in quest.MyCollectObjectives)
                 {
-                    if (obj.MyType == "Gold" && !obj.MyComplete)
+                    if (obj.MyType == typeOfObject && !obj.MyComplete)
                     {
-                        obj.MyCurrentAmount += gold;
+                        obj.MyCurrentAmount += addAmount;
                         obj.Evaluate();
                     }
                 }

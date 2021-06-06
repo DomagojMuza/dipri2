@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6158645823958512042
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6158645823958512039}
+  - component: {fileID: 6158645823958512036}
+  - component: {fileID: 6158645823958512037}
+  m_Layer: 0
+  m_Name: PortMainQuest
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6158645823958512039
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6158645823958512042}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 703.9, y: 0, z: 936.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &6158645823958512036
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6158645823958512042}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 33, y: 5, z: 60}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6158645823958512037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6158645823958512042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 484324c330a805f4ea474010dc4e7cd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questDialog:
+    recenice:
+    - "\u201CDocks at bay, enters the tavern and sits at one of the tables\u201D"
+    - 'How can I help a young lady?
+
+'
+    - "\u201CPuts a few gold pieces at table\u201D I am looking for a certain information
+      about someone."
+    - "It depends about who, that maybe isn\u2019t enough."
+    - "Bernet, Johnatan Bernet, navy pirate hunter.\r\nWorker: I know who he is,
+      and you should double the coin, any information about the navy isn\u2019t going
+      to be cheap."
+    - "I\u2019ll triple it, but only if you tell me what I want to know.\r\n"
+    - What do you want to know?
+    - Tell me everything you know about his ship. How many cannons, speed and maneuverability
+      of the ship.
+    - "He has a medium sized ship with a lot of cannons, more than 5 on each side,
+      and as I heard each of them packs a serious firepower, but slow with poor maneuverability\u2026"
+    - "That\u2019s all I wanted, here is your gold, and bring me a bottle of rum."
+    - One rum bottle coming.
+    - "(So my best strategy is speed and agility, and that means upgrading the ship
+      further or just confront him as is. Either way, first I should visit an old
+      friend\u2026)"
+    - This rum hit me hard, now I'm in a mood to destroy someth... *BURP*
+  normalDialog:
+    recenice: []
+  questRelated: 1
+  npcImage: {fileID: 0}
+  quests:
+  - title: Destroy ships
+    description: You got drunk and want to destroy something
+    collectObjectives:
+    - amount: 5
+      type: Enemy
+    nextQuestNPC: 0
+    questAfterQuest: 1
+    questAfterQuestPosition: 1

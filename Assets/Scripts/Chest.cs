@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Chest : MonoBehaviour
+public class Chest : Destroyble
 {
     public AudioClip saw;
     public int gold;
@@ -11,6 +11,10 @@ public class Chest : MonoBehaviour
     {
         gold = Random.Range(100, 3000);
         GetComponent<AudioSource>().playOnAwake = false;
+    }
+
+    void Update(){
+        DestroyOutsideView();
     }
 
     public void OnTriggerEnter(Collider other)

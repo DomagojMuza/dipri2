@@ -7,6 +7,7 @@ public class Spawner : MonoBehaviour
     public float spawnDelay;
     public GameObject spawnee;
     public int NumberOfEnemys;
+    public string name;
     bool spawnAvailble = true;
 
     void Start()
@@ -27,8 +28,9 @@ public class Spawner : MonoBehaviour
 
         GameObject enemy = Instantiate(spawnee, new Vector3(0, 0, -450), Quaternion.identity);
         GameObject child = enemy.transform.GetChild(0).gameObject;
+        child.transform.name = this.name;
         child.GetComponent<Enemy>().spawner = this;
-        child.transform.position = new Vector3(randomX, 0, randomZ);
+        child.transform.localPosition = new Vector3(randomX, 0, randomZ);
         child.GetComponent<EnemyController>().target = FindObjectOfType<Player>().transform;
         NumberOfEnemys++;
         yield return new WaitForSeconds(spawnDelay);

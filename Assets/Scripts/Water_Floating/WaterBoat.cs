@@ -42,15 +42,17 @@ public class WaterBoat : MonoBehaviour
 
         //steer direction [-1,0,1]
         if (Input.GetKey(KeyCode.A))
-            steer = 1;
-        if (Input.GetKey(KeyCode.D))
             steer = -1;
+        if (Input.GetKey(KeyCode.D))
+            steer = 1;
 
         //Rotational Force
-        if (Math.Abs(Rigidbody.angularVelocity.magnitude) < 0.0001 * SteerPower)
+        if (Math.Abs(Rigidbody.angularVelocity.magnitude) < 0.50f)
         {
-            //Debug.Log(Math.Abs(Rigidbody.angularVelocity.magnitude));
-            Rigidbody.AddForceAtPosition(steer * transform.right * SteerPower / 100f, Motor.position);
+            //Debug.Log(Rigidbody.angularVelocity.magnitude* steer + "   " + steer);
+            //Debug.Log(Rigidbody.angularVelocity.magnitude);
+            Rigidbody.AddTorque(steer * transform.up * (SteerPower /15f));
+            //Rigidbody.AddForceAtPosition(steer * transform.right * SteerPower / 100f, Motor.position);
         }
 
 

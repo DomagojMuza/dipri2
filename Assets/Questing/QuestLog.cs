@@ -43,6 +43,7 @@ public class QuestLog : MonoBehaviour
     public void AceptQuest(Quest quest)
     {
         quests.Add(quest);
+        quest.QuestEvaluate();
         GameObject go = Instantiate(questPrefab, questParent);
 
         QuestScript qs = go.GetComponent<QuestScript>();

@@ -2,34 +2,56 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class QuestGiverDialogTrigger : MonoBehaviour
+public class QuestGiverDialogTrigger : Destroyble
 {
     // Start is called before the first frame update
     public Dialog questDialog;
 
     public Dialog normalDialog;
 
+    public bool questRelated;
+
     public Sprite npcImage;
+
+    bool canBeDestroyed = false;
 
     public Quest[] quests;
     public void TriggerDialog()
     {
-        if(quests == null)
+
+        if(quests != null)
+        {
+            FindObjectOfType<DialogManager>().StartDialog(questDialog, npcImage, quests);
+            quests = null;
+            canBeDestroyed = true;
+            return;
+        }
+        if(normalDialog != null)
         {
             FindObjectOfType<DialogManager>().StartDialog(normalDialog, npcImage);
             return;
         }
-        FindObjectOfType<DialogManager>().StartDialog(questDialog, npcImage, quests);
-        quests = null;
+        return;
+        
+    }
+
+    void Update(){
+        if(canBeDestroyed){
+            DestroyOutsideView();
+        }
+        
     }
 
     public void OnTriggerEnter(Collider other)
     {
-        Debug.Log("triggero se");
         if(other.tag == "Player")
         {
-            Debug.Log("Player triggero");
-            TriggerDialog();
-        }
+            if(questRelated)
+            {
+            Player.MyInstance.CheckQuest(1, gameObject.name);
+            questRelated = false;
+            }   
+            TriggerDialog(); 
+        }        
     }
 }

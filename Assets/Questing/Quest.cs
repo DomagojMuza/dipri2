@@ -18,6 +18,10 @@ public class Quest
 
     private bool complete;
 
+    public bool nextQuestNPC;
+    public bool questAfterQuest;
+    public int questAfterQuestPosition;
+
     public string MyTitle
     {
         get { return title; }
@@ -39,14 +43,18 @@ public class Quest
          
         }
         MyComplete = true;
+        if(questAfterQuest && MyComplete){
+            QuestAfterQuest.MyInstance.AddQuestAfterQuest(questAfterQuestPosition);
+        }
 
-        //QuestReward.MyInstance.openWith["rft"].DynamicInvoke(2);
-        Debug.Log(MyTitle + " Complete");
     }
 
-    void Start()
-    {
-        
+    public void QuestEvaluate()
+    {Debug.Log("Next quest " + MyTitle);
+        if(nextQuestNPC){
+            Debug.Log("Spawn " + MyTitle);
+            Storyline.MyInstance.SpawnStory();
+        }
     }
 
    
@@ -67,10 +75,11 @@ public abstract class Objective
     [SerializeField]
     private string type;
 
+
     private bool complete = false;
 
 
-    public int MyAmount { get => amount; }
+    public int MyAmount { get => amount; set => amount = value;}
     public string MyType { get => type; set => type = value; }
     public int MyCurrentAmount { get => currentAmount; set => currentAmount = value; }
 

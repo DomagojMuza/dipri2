@@ -54,7 +54,6 @@ public class DialogManager : MonoBehaviour
     {
        if(Quests != null)
         {
-
             foreach(Quest q in Quests)
             {
                 QuestLog.MyInstance.AceptQuest(q);

@@ -8,6 +8,8 @@ public class PlayerFollow : MonoBehaviour {
 
     private Vector3 _cameraOffset;
 
+    public float height = 40;
+
     [Range(0.01f, 1.0f)]
     public float SmoothFactor = 0.5f;
 
@@ -24,7 +26,7 @@ public class PlayerFollow : MonoBehaviour {
     }
     // Use this for initialization
     void Start () {
-        _cameraOffset = transform.position - PlayerTransform.position;
+        _cameraOffset = transform.position - new Vector3(PlayerTransform.position.x, 0, PlayerTransform.position.z);
 	}
 	
 	// LateUpdate is called after Update methods
@@ -37,11 +39,9 @@ public class PlayerFollow : MonoBehaviour {
 
             _cameraOffset = camTurnAngle * _cameraOffset;
         }
-
-        Vector3 newPos = PlayerTransform.position + _cameraOffset;
+        Vector3 newPos = new Vector3(PlayerTransform.position.x, 0, PlayerTransform.position.z) + _cameraOffset;
 
         transform.position = Vector3.Slerp(transform.position, newPos, SmoothFactor);
-        transform.position = new Vector3(transform.position.x, 40, transform.position.z);
 
         if (LookAtPlayer || RotateAroundPlayer)
             transform.LookAt(PlayerTransform);

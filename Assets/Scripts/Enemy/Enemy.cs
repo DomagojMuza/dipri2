@@ -13,6 +13,8 @@ public class Enemy : MonoBehaviour
 
     public NavMeshAgent agent;
 
+    private bool dead;
+
     public Spawner spawner;
 
     // Start is called before the first frame update
@@ -27,7 +29,7 @@ public class Enemy : MonoBehaviour
     [System.Obsolete]
     void Update()
     {
-        if (this.HP <= 0)
+        if (this.HP <= 0 && !dead)
         {
             //GameObject firework = Instantiate(ex, gameObject.transform.position + new Vector3(0, 3, 0), Quaternion.identity);
             //firework.GetComponent<ParticleSystem>().startSize = 20;
@@ -52,6 +54,8 @@ public class Enemy : MonoBehaviour
 
     IEnumerator death()
     {
+        dead = true;
+        Player.MyInstance.CheckQuest(1, gameObject.name);
         agent.speed = 0f;
         agent.angularSpeed = 0;
         agent.acceleration = 0;

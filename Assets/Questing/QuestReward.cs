@@ -9,7 +9,7 @@ public class QuestReward : MonoBehaviour
     {
     }
     public static QuestReward instance;
-    public Dictionary<string, TestDelegate> openWith = new Dictionary<string, TestDelegate>();
+    public Dictionary<string, TestDelegate> questReward = new Dictionary<string, TestDelegate>();
 
     public static QuestReward MyInstance
     {
@@ -28,9 +28,9 @@ public class QuestReward : MonoBehaviour
     {
         
 
-        openWith.Add("gold", (x) => { Player.MyInstance.goldAmount += x; });
-        openWith.Add("hp", (x) => { Player.MyInstance.HP += x; });
-        openWith.Add("dmg", (x) => {
+        questReward.Add("gold", (x) => { Player.MyInstance.goldAmount += x; });
+        questReward.Add("hp", (x) => { Player.MyInstance.HP += x; });
+        questReward.Add("dmg", (x) => {
             Player player = FindObjectOfType<Player>();
             CannonController[] controllers = player.GetComponentsInChildren<CannonController>();
             foreach(CannonController controller in controllers)
@@ -38,9 +38,9 @@ public class QuestReward : MonoBehaviour
                 controller.cannonballDmg += x;
             }
         });
-        openWith.Add("rtf", (x) => { Debug.Log(x); });
+        questReward.Add("rtf", (x) => { Debug.Log(x); });
 
-        openWith["rtf"].DynamicInvoke(5);
+        questReward["rtf"].DynamicInvoke(5);
 
 
     }
