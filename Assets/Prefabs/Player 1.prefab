@@ -1064,8 +1064,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 8.087891, y: 11.626274, z: 31.069336}
-  m_Center: {x: 0.15856934, y: -0.90233445, z: 0.4951172}
+  m_Size: {x: 4.8649244, y: 9.575139, z: 31.069336}
+  m_Center: {x: 0.27454472, y: 0.12323332, z: 0.49511722}
 --- !u!114 &7757722767476516609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3256,6 +3256,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerTransform: {fileID: 8687934381770084915}
+  height: 40
   SmoothFactor: 0.5
   LookAtPlayer: 0
   RotateAroundPlayer: 1
