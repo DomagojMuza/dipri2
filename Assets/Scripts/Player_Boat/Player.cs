@@ -7,9 +7,10 @@ public class Player : MonoBehaviour
     public void Awake()
     {
         HP = 100;
+        cannons = gameObject.GetComponentsInChildren<CannonController>();
     }
 
-
+    private CannonController[] cannons;
     public int goldAmount;
 
     public int HP;
@@ -69,6 +70,20 @@ public class Player : MonoBehaviour
         if(other.tag == "Cannonball")
         {
             HP -= other.GetComponent<Cannonball>().Dmg;
+        }
+    }
+
+    public void EnableCannons(){
+        foreach (CannonController cannon in cannons)
+        {
+            cannon.enabled = true;
+        }
+    }
+
+    public void DisableCannons(){
+        foreach (CannonController cannon in cannons)
+        {
+            cannon.enabled = false;
         }
     }
 }

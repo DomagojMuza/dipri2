@@ -23,6 +23,7 @@ public class DialogManager : MonoBehaviour
 
     public void StartDialog(Dialog dialog, Sprite npc, Quest[] quests = null)
     {
+        Player.MyInstance.DisableCannons();
         Debug.Log(npc);
         Quests = quests;
         animator.SetBool("IsOpen", true);
@@ -61,6 +62,7 @@ public class DialogManager : MonoBehaviour
        }
         Quests = null;
         animator.SetBool("IsOpen", false);
+        Player.MyInstance.EnableCannons();
     }
 
    

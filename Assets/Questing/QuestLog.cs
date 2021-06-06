@@ -82,9 +82,11 @@ public class QuestLog : MonoBehaviour
         if(canvasGroup.alpha == 1)
         {
             Close();
+            
         }
         else
         {
+            Player.MyInstance.DisableCannons();
             animator.SetBool("IsOpen", true);
             canvasGroup.blocksRaycasts = true;
         }
@@ -92,6 +94,7 @@ public class QuestLog : MonoBehaviour
 
     public void Close()
     {
+        Player.MyInstance.EnableCannons();
         animator.SetBool("IsOpen", false);
         questDescription.text = "";
         selected.MyQuestScript.DeSelect();
