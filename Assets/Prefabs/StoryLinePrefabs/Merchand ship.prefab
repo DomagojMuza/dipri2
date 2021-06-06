@@ -787,7 +787,7 @@ MonoBehaviour:
   - title: Kill pirates
     description: Kill 7 pirate ships and collect chests they drop
     collectObjectives:
-    - amount: 1
+    - amount: 7
       type: Pirate
     nextQuestNPC: 0
     questAfterQuest: 1
