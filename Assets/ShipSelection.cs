@@ -29,6 +29,5 @@ public class ShipSelection : MonoBehaviour
     public void StartGame()
     {
         PlayerPrefs.SetInt("selectedShip", selectedShip);
-        SceneManager.LoadScene(1, LoadSceneMode.Single);
     }
 }
