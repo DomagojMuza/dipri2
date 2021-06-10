@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -8,10 +9,19 @@ public class Player : MonoBehaviour
     {
         HP = 100;
         cannons = gameObject.GetComponentsInChildren<CannonController>();
+        hpBar hp = FindObjectOfType<hpBar>();
+        image = hp.GetComponent<Image>();
     }
 
     private CannonController[] cannons;
     public int goldAmount;
+
+    public Image image;
+
+    int check = 0;
+
+    float translateposition=0;
+    float scale = 0f;
 
     public int HP;
 
@@ -68,8 +78,33 @@ public class Player : MonoBehaviour
     public void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Cannonball")
-        {
+        {   
+            
+            if(check == 1){
+                return;
+            }
+            float width = 800f;
+            float dmg = 5f / 100f;
+            float translate = width*dmg/2;
+            
+            scale += dmg;
+            translateposition = translateposition+translate;
+            Debug.Log(translateposition);
             HP -= other.GetComponent<Cannonball>().Dmg;
+            Debug.Log("dogodio se collision");
+            if(HP != 0){
+                image.transform.localScale -= new Vector3(dmg, 0.0f, 0.0f);
+                image.transform.position -= new Vector3(translate, 0.0f, 0.0f);
+            }
+            else{
+                HP=100;
+                scale -= dmg;
+                translateposition = translateposition-translate;
+                image.transform.localScale += new Vector3(scale, 0.0f, 0.0f);
+                image.transform.position += new Vector3(translateposition, 0.0f, 0.0f);
+                check = 1;
+            }
+            
         }
     }
 

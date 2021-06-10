@@ -1117,6 +1117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goldAmount: 0
+  image: {fileID: 0}
   HP: 0
 --- !u!1 &2568228159881298382
 GameObject:

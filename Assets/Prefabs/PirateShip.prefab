@@ -277,6 +277,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goldAmount: 0
+  image: {fileID: 0}
   HP: 0
 --- !u!65 &1797314406264721135
 BoxCollider:

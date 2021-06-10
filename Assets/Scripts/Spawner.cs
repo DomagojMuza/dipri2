@@ -12,12 +12,11 @@ public class Spawner : MonoBehaviour
 
     void Start()
     {
-        
     }
 
     void Update()
-    {
-        if (NumberOfEnemys < 1 && spawnAvailble) StartCoroutine(Spawn());
+    {   
+        if (NumberOfEnemys < 2 && spawnAvailble) StartCoroutine(Spawn());
     }
 
     IEnumerator Spawn()

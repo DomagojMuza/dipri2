@@ -8694,7 +8694,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnDelay: 5
   spawnee: {fileID: 9063717171529902442, guid: 1e836539006799a4e83470366f744536, type: 3}
-  NumberOfEnemys: 2
+  NumberOfEnemys: 0
   name: Pirate
 --- !u!4 &1906081754
 Transform:
@@ -10342,6 +10342,7 @@ GameObject:
   - component: {fileID: 3444526227740572970}
   - component: {fileID: 3444526227740572972}
   - component: {fileID: 3444526227740572971}
+  - component: {fileID: 3444526227740572973}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -10406,6 +10407,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3444526227740572969}
   m_CullTransparentMesh: 1
+--- !u!114 &3444526227740572973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3444526227740572969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea1ab639d65527041bb4628c5c1afad1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3444526227778682860
 GameObject:
   m_ObjectHideFlags: 0

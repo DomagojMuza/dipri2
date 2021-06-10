@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 852730164094774133}
   - component: {fileID: 7606751461639213219}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EnemyArrow 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
