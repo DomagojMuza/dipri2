@@ -10,16 +10,15 @@ public class PanelOpener : MonoBehaviour
         if(Panel != null)
         {
             bool isActive = Panel.activeSelf;
-            if(isActive){
+            if(isActive)
+            {
                 Player.MyInstance.EnableCannons();
             } else{
                 Player.MyInstance.DisableCannons();
             }
-
             Panel.SetActive(!isActive);
         }
     }
-
     public void Update()
     {
         if(Input.GetKeyDown(KeyCode.I))
