@@ -780,14 +780,16 @@ MonoBehaviour:
       and then find someone who knows more about Barnet's ship, bet the port would
       be the best place.)
   normalDialog:
-    recenice: []
+    recenice:
+    - Go on then pirates are on the other side of this island
   questRelated: 0
-  npcImage: {fileID: 21300000, guid: 9c08824caa22e424eb785f5c9c4271da, type: 3}
+  npcImage: {fileID: 21300000, guid: 5316f0b982f925947a2a2486707ef49d, type: 3}
+  open: 0
   quests:
   - title: Kill pirates
     description: Kill 7 pirate ships and collect chests they drop
     collectObjectives:
-    - amount: 7
+    - amount: 1
       type: Pirate
     nextQuestNPC: 0
     questAfterQuest: 1

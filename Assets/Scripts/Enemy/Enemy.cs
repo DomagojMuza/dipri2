@@ -5,9 +5,11 @@ using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 { 
-    public int HP = 200;
+    public int HP;
 
     public GameObject ex;
+
+    public GameObject chest;
 
     public Animator animator;
 
@@ -20,6 +22,7 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        HP = 65;
         animator = gameObject.GetComponentInParent<Animator>();
         agent = GetComponent<NavMeshAgent>();
 
@@ -61,7 +64,10 @@ public class Enemy : MonoBehaviour
         agent.acceleration = 0;
         agent.enabled = false;
         animator.SetBool("isDead", true);
+        WaterFloat floater = GetComponent<WaterFloat>();
+        floater.AttachToSurface = false;
         yield return new WaitForSeconds(5f);
+        Instantiate(chest, gameObject.transform.position, Quaternion.identity);
         spawner.NumberOfEnemys--;
         Destroy(transform.parent.gameObject);
 

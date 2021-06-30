@@ -1187,7 +1187,7 @@ Transform:
   m_GameObject: {fileID: 9063717170549912457}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 528, y: 0, z: 1000}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children:
   - {fileID: 9063717169661701553}
   - {fileID: 9063717169954877841}
@@ -1267,8 +1267,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8777dbfe52b8eb43a1868974c8a505a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 2
+  HP: 0
   ex: {fileID: 3334155785200811830, guid: e32c61d2268c933409128a0186afe542, type: 3}
+  chest: {fileID: 874090660037961841, guid: bb6f9c720bad093479419ce9371b16f2, type: 3}
   animator: {fileID: 0}
   agent: {fileID: 0}
   spawner: {fileID: 0}
@@ -1292,7 +1293,7 @@ NavMeshAgent:
   m_AutoRepath: 1
   m_Height: 2
   m_BaseOffset: 0
-  m_WalkableMask: 4294967295
+  m_WalkableMask: 1
   m_ObstacleAvoidanceType: 3
 --- !u!114 &9063717170549912459
 MonoBehaviour:
@@ -1308,6 +1309,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lookRadius: 40
   target: {fileID: 0}
+  Damage: 5
   whatIsWater:
     serializedVersion: 2
     m_Bits: 16
@@ -1315,6 +1317,7 @@ MonoBehaviour:
   walkPointRange: 200
   leftCannons: {fileID: 9063717170824382433}
   rightCannons: {fileID: 9063717170599811535}
+  waitTimeSet: 0
   BlastPower: 100
   Cannonball: {fileID: 5902321101475063141, guid: 9cee2ab057a12a2448bf0eb141eda736, type: 3}
 --- !u!1 &9063717170599811534

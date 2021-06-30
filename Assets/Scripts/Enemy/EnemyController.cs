@@ -12,6 +12,8 @@ public class EnemyController : MonoBehaviour
     NavMeshAgent agent;
     bool orbit = false;
 
+    public int Damage = 5;
+
     public LayerMask whatIsWater;
 
     //Patroling
@@ -26,6 +28,10 @@ public class EnemyController : MonoBehaviour
     bool isAttacking = false;
     bool isReloading = false;
     bool looked = false;
+    bool initAttack = false;
+
+    float waitTime = 0f;
+    public float waitTimeSet;
 
     public float BlastPower = 100f;
     public GameObject Cannonball;
@@ -59,26 +65,6 @@ public class EnemyController : MonoBehaviour
         {
             orbit = false;
         }
-
-
-        //if (distance <= lookRadius && enemy.HP > 0)
-        //{
-        //    WhatSide();
-        //    orbit = true;
-        //    var offsetPlayer = target.transform.position - transform.position;
-        //    var dir = Vector3.Cross(offsetPlayer, sideToTurn);
-        //    agent.SetDestination(transform.position + dir);
-        //    ShootPrepare();
-        //}
-        //else
-        //{
-        //    orbit = false;
-        //}
-        //if (distance <= 90 && !orbit && enemy.HP > 0)
-        //{     
-        //    looked = false;
-        //    agent.SetDestination(target.position);
-        //}
     }
 
     void Patroling()
@@ -105,7 +91,7 @@ public class EnemyController : MonoBehaviour
 
         walkPoint = new Vector3(transform.position.x + randomX, transform.position.y, transform.position.z + randomZ);
 
-        Debug.Log(Physics.Raycast(walkPoint + new Vector3(0, 4, 0), -transform.up, 20f));
+        // Debug.Log(Physics.Raycast(walkPoint + new Vector3(0, 4, 0), -transform.up, 20f));
 
         if(Physics.Raycast(walkPoint + new Vector3(0, 4, 0), -transform.up, 20f))
         {
@@ -127,7 +113,13 @@ public class EnemyController : MonoBehaviour
         var offsetPlayer = target.transform.position - transform.position;
         var dir = Vector3.Cross(offsetPlayer, sideToTurn);
         agent.SetDestination(transform.position + dir);
-        ShootPrepare();
+        if(!initAttack){
+            waitTime = waitTimeSet;
+        }
+        else{
+            waitTime = 0;
+        }
+        StartCoroutine(ShootPrepare());
     }
 
     private void OnDrawGizmosSelected()
@@ -170,12 +162,13 @@ public class EnemyController : MonoBehaviour
         }
     }
 
-    void ShootPrepare()
+    IEnumerator ShootPrepare()
     {
         if(!isAttacking && !isReloading)
         {
             isAttacking = true;
             isReloading = true;
+            yield return new WaitForSeconds(waitTime);
             StartCoroutine(Shoot(currentShootPoints));
         }
     }
@@ -188,7 +181,7 @@ public class EnemyController : MonoBehaviour
             {
 
                 GameObject CreatedCannonball = Instantiate(Cannonball, point.position, point.rotation);
-                CreatedCannonball.gameObject.GetComponent<Cannonball>().Dmg = 5;
+                CreatedCannonball.gameObject.GetComponent<Cannonball>().Dmg = Damage;
                 CreatedCannonball.GetComponent<Rigidbody>().AddForce(point.transform.right * BlastPower);
                 CreatedCannonball.GetComponent<Rigidbody>().AddForce(point.transform.up * (BlastPower / 3));
 

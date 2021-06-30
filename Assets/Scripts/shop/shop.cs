@@ -86,23 +86,34 @@ public class shop : MonoBehaviour
 
     void BuyHPSmall()
     {
-        
-        if(MyPlayer.goldAmount >= 5000){
-            MyPlayer.goldAmount -= 5000;
-            ScoreManager.instance.ChangeCoinsScore(MyPlayer.goldAmount);
-            MyPlayer.HP +=5;
-        }
-        
+        if(MyPlayer.HP < 100){
+            if(MyPlayer.goldAmount >= 5000){
+                MyPlayer.goldAmount -= 5000;
+                ScoreManager.instance.ChangeCoinsScore(MyPlayer.goldAmount);
+                MyPlayer.HP +=5;
+                MyPlayer.addHP(5);
+            }
+        }    
+        else{
+            Debug.Log("Your HP is already full");
+            MyPlayer.HP = 100;
+        }    
     }
 
     void BuyHPBig()
     {
-        
-        if(MyPlayer.goldAmount >= 10000){
-            MyPlayer.goldAmount -= 10000;
-            ScoreManager.instance.ChangeCoinsScore(MyPlayer.goldAmount);
-            MyPlayer.HP +=12;
-        }
+        if(MyPlayer.HP < 100){
+            if(MyPlayer.goldAmount >= 10000){
+                MyPlayer.goldAmount -= 10000;
+                ScoreManager.instance.ChangeCoinsScore(MyPlayer.goldAmount);
+                MyPlayer.HP +=12;
+                MyPlayer.addHP(12);
+            }
+        }    
+        else{
+            Debug.Log("Your HP is already full");
+            MyPlayer.HP = 100;
+        } 
         
     }
 

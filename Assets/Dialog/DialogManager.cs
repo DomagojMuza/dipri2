@@ -16,6 +16,9 @@ public class DialogManager : MonoBehaviour
 
     private Quest[] Quests;
 
+    public QuestGiverDialogTrigger trigger;
+
+
     void Start()
     {
         recenice = new Queue<string>();
@@ -43,6 +46,8 @@ public class DialogManager : MonoBehaviour
     {
         if(recenice.Count == 0)
         {
+            trigger.open = false;
+            trigger = null;
             EndDialog();
             return;
         }

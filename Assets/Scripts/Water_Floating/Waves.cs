@@ -22,6 +22,13 @@ public class Waves : MonoBehaviour
     void Start()
     {
         //Mesh Setup
+        
+
+        surface.BuildNavMesh();
+
+    }
+
+    void Awake(){
         Mesh = new Mesh();
         Mesh.name = gameObject.name;
 
@@ -33,9 +40,6 @@ public class Waves : MonoBehaviour
 
         MeshFilter = gameObject.AddComponent<MeshFilter>();
         MeshFilter.mesh = Mesh;
-
-        surface.BuildNavMesh();
-
     }
 
     public float GetHeight(Vector3 position)
