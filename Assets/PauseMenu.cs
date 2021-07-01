@@ -30,6 +30,7 @@ public class PauseMenu : MonoBehaviour {
         Time.timeScale = 1f;
         GameIsPaused = false;
         Player.MyInstance.EnableCannons();
+        AudioListener.pause = false;
     }
 
     void Pause()
@@ -37,6 +38,7 @@ public class PauseMenu : MonoBehaviour {
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
+        AudioListener.pause = false;
     }
 
     public void LoadMenu()

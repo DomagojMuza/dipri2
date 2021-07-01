@@ -32,6 +32,7 @@ public class WaterBoat : MonoBehaviour
         Rigidbody = GetComponent<Rigidbody>();
         StartRotation = Motor.localRotation;
         Camera = Camera.main;
+        Rigidbody.angularDrag = 1f;
     }
 
     public void FixedUpdate()

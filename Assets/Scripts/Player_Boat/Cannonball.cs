@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Cannonball : MonoBehaviour
 {
-    public int Dmg;
+    public float Dmg;
 
     void Start()
     {

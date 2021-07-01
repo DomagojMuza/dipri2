@@ -12,7 +12,7 @@ public class EnemyController : MonoBehaviour
     NavMeshAgent agent;
     bool orbit = false;
 
-    public int Damage = 5;
+    public float Damage = 5;
 
     public LayerMask whatIsWater;
 
@@ -46,6 +46,7 @@ public class EnemyController : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         enemy = GetComponent<Enemy>();
+        Damage = FindObjectOfType<Player>().HP * Mathf.Sqrt(FindObjectOfType<shop>().dmgLVL);
 
     }
 

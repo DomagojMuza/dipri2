@@ -2227,10 +2227,23 @@ MonoBehaviour:
   questDialog:
     recenice:
     - I see you got my chest
+    - Now if you would be so kind and do just one little task...
+    - How about I kill you right now?
+    - Remeber, without me you can't lure Branton out so just listen and do this last
+      simple task.  There is Island South od here and some people own me money, and
+      you job is simple, go, scare them and maybe kill somebody, that depends on
+      you.
+    - 'Fine, but this better be the last thing I do for you!
+
+'
+    - Yes, yes, now go, please.
+    - ... (This better pay off or he's dead man)
   normalDialog:
-    recenice: []
+    recenice:
+    - Remember, island South of here
   questRelated: 1
   npcImage: {fileID: 0}
+  open: 0
   quests: []
 --- !u!1 &3387363768798469688
 GameObject:

@@ -2029,6 +2029,7 @@ MonoBehaviour:
   button5: {fileID: 323003814}
   button6: {fileID: 907311658}
   button7: {fileID: 1920766520}
+  dmgLVL: 1
 --- !u!114 &323003814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4848,6 +4849,7 @@ MonoBehaviour:
   button5: {fileID: 323003814}
   button6: {fileID: 907311658}
   button7: {fileID: 1920766520}
+  dmgLVL: 1
 --- !u!114 &907311658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9200,6 +9202,7 @@ MonoBehaviour:
   button5: {fileID: 323003814}
   button6: {fileID: 907311658}
   button7: {fileID: 1920766520}
+  dmgLVL: 1
 --- !u!114 &1920766520
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9544,6 +9547,7 @@ MonoBehaviour:
   button5: {fileID: 323003814}
   button6: {fileID: 907311658}
   button7: {fileID: 1920766520}
+  dmgLVL: 1
 --- !u!114 &1967743802
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9809,6 +9813,7 @@ MonoBehaviour:
   button5: {fileID: 323003814}
   button6: {fileID: 907311658}
   button7: {fileID: 1920766520}
+  dmgLVL: 1
 --- !u!114 &1981538204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11053,6 +11058,10 @@ PrefabInstance:
     - target: {fileID: 3199756196149273888, guid: 857e16318a83bfb4f906c943712c93bb, type: 3}
       propertyPath: m_Name
       value: QuestsAfterQuest
+      objectReference: {fileID: 0}
+    - target: {fileID: 4179429189238787825, guid: 857e16318a83bfb4f906c943712c93bb, type: 3}
+      propertyPath: QuestsAfterQuest.Array.data[1].description
+      value: Find friend in NE part of the map and talk to him
       objectReference: {fileID: 0}
     - target: {fileID: 5621581917309573444, guid: 857e16318a83bfb4f906c943712c93bb, type: 3}
       propertyPath: m_RootOrder

@@ -1811,11 +1811,23 @@ MonoBehaviour:
   destroy: 1
   questDialog:
     recenice:
-    - Look who it is
+    - Look who it is. Long time no see. What brings you to me? Ha ha
+    - Hi Jesper. I need a simple favour, find a way to get Barton here, I have some
+      buisnesse with him.
+    - I don't care what is it, let's have a deal. you do something for me and I get
+      him here.
+    - Sure. (Whatever I'll nedd to do will be tiresome...)
+    - Well, you see, last night I lost a very important chest near the port, find
+      it, get it here and then we will talk
+    - See you in a bit then Jesper
+    - Oh yea, do not open the chest otherwise our deal falls apart. Ha ha
+    - (Weirdo)
   normalDialog:
-    recenice: []
+    recenice:
+    - Go my friend. He he he
   questRelated: 1
-  npcImage: {fileID: 0}
+  npcImage: {fileID: 21300000, guid: be8ce9c126fa95549bfc785d72b5ca22, type: 3}
+  open: 0
   quests:
   - title: 'Find golden chest '
     description: Find golden chest near the port

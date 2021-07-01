@@ -18,7 +18,7 @@ public class Player : MonoBehaviour
     float translateposition=0;
     float scale = 0f;
 
-    public int HP;
+    public float HP;
 
     private static Player instance;
 

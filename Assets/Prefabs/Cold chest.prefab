@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2804330952185879232}
   - component: {fileID: 8945338407499882699}
   - component: {fileID: 6738029873648137621}
+  - component: {fileID: -4965095885894638311}
   m_Layer: 0
   m_Name: Cold chest
   m_TagString: Untagged
@@ -151,6 +152,18 @@ MonoBehaviour:
   - {fileID: 6960279708379754793}
   - {fileID: 3722274392361081119}
   - {fileID: 868048777652742870}
+--- !u!114 &-4965095885894638311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000014188511100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a8275da5d39bea4f8b0fa945d837f71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &350547952080029637
 GameObject:
   m_ObjectHideFlags: 0
