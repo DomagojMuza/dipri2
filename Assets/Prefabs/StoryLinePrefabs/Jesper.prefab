@@ -2244,7 +2244,15 @@ MonoBehaviour:
   questRelated: 1
   npcImage: {fileID: 0}
   open: 0
-  quests: []
+  quests:
+  - title: Scare people
+    description: Jasper want's you to scare some pepole South of him on some island
+    collectObjectives:
+    - amount: 1
+      type: Scare people
+    nextQuestNPC: 1
+    questAfterQuest: 0
+    questAfterQuestPosition: 0
 --- !u!1 &3387363768798469688
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Storyline : MonoBehaviour
 {
@@ -33,8 +34,20 @@ public class Storyline : MonoBehaviour
 
     public void SpawnStory(){
         Story s = storyQueue.Dequeue();
-        GameObject spawn = Instantiate(s.npc, new Vector3(s.x, 0, s.z), Quaternion.identity);
-        spawn.transform.name = s.tag;
+
+        if(s.tag == "MiniBoss"){
+            GameObject spawn = Instantiate(s.npc, new Vector3(0, 0, -450), Quaternion.identity);
+            GameObject child = spawn.transform.GetChild(0).gameObject;
+            spawn.transform.name = this.name;
+            NavMeshAgent agent = child.GetComponent<NavMeshAgent>();
+            child.GetComponent<EnemyController>().waitTimeSet = 50f/agent.angularSpeed;
+            child.transform.localPosition = new Vector3(s.x, 0, s.z);
+            child.GetComponent<EnemyController>().target = FindObjectOfType<Player>().transform;
+        }else{
+            GameObject spawn = Instantiate(s.npc, new Vector3(s.x, 0, s.z), Quaternion.identity);
+            spawn.transform.name = s.tag;
+        }
+        
     }
 }
 

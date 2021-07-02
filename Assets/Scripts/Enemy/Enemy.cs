@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 { 
-    public float HP;
+    public float HP = 0;
 
     public GameObject ex;
 
@@ -22,7 +22,10 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        HP = 65;
+        if(HP == 0){
+            HP = 65;
+        }
+        
         animator = gameObject.GetComponentInParent<Animator>();
         agent = GetComponent<NavMeshAgent>();
 

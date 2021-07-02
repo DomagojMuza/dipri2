@@ -91,7 +91,7 @@ MonoBehaviour:
   - title: Destroy ships
     description: You got drunk and want to destroy something
     collectObjectives:
-    - amount: 5
+    - amount: 3
       type: Enemy
     nextQuestNPC: 0
     questAfterQuest: 1

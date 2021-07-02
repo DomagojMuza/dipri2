@@ -10,6 +10,11 @@ public class Spawner : MonoBehaviour
     public int NumberOfEnemys;
     public int waitTime;
     public string name;
+
+    public int xMin;
+    public int xMax;
+    public int zMin;
+    public int zMax;
     bool spawnAvailble = true;
 
     void Start()
@@ -39,6 +44,7 @@ public class Spawner : MonoBehaviour
         NavMeshAgent agent = child.GetComponent<NavMeshAgent>();
         child.GetComponent<EnemyController>().waitTimeSet = 50f/agent.angularSpeed;
         child.transform.localPosition = new Vector3(coordinates[0], 0, coordinates[1]);
+        Debug.Log(coordinates[0]+ " " + coordinates[1]);
         child.GetComponent<EnemyController>().target = FindObjectOfType<Player>().transform;
         NumberOfEnemys++;
         yield return new WaitForSeconds(spawnDelay);
@@ -48,8 +54,8 @@ public class Spawner : MonoBehaviour
 
     public float[] GenerateCoordinates()
     {
-        float randomX = Random.Range(30, 1900);
-        float randomZ = Random.Range(30, 730);
+        float randomX = Random.Range(xMin, xMax);
+        float randomZ = Random.Range(zMin, zMax);
         float[] values = new float[2];
         values[0] = randomX;
         values[1] = randomZ;
