@@ -10,6 +10,7 @@ public class Collectible : MonoBehaviour
         if(other.tag == "Player")
         {
            Player.MyInstance.CheckQuest(1, gameObject.name);
+           Destroy(gameObject);
         }
     }
 }

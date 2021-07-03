@@ -30,6 +30,8 @@ public class EnemyController : MonoBehaviour
     bool looked = false;
     bool initAttack = false;
 
+    public System.DateTime startTime;
+
     float waitTime = 0f;
     public float waitTimeSet;
 
@@ -83,6 +85,11 @@ public class EnemyController : MonoBehaviour
         {
             walkPointSet = false;
         }
+        
+        System.TimeSpan ts = System.DateTime.UtcNow - startTime;
+        if(walkPointSet && ts.Seconds>=20){
+            SetWalkPoint();
+        }
     }
 
     void SetWalkPoint()
@@ -97,6 +104,7 @@ public class EnemyController : MonoBehaviour
         if(Physics.Raycast(walkPoint + new Vector3(0, 4, 0), -transform.up, 20f))
         {
             walkPointSet = true;
+            startTime = System.DateTime.UtcNow;
         }
     }
 

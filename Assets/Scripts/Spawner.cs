@@ -36,7 +36,7 @@ public class Spawner : MonoBehaviour
         }
         spawnAvailble = false;
         
-
+        Debug.Log(coordinates[0] + " " + coordinates[1]);
         GameObject enemy = Instantiate(spawnee, new Vector3(0, 0, -450), Quaternion.identity);
         GameObject child = enemy.transform.GetChild(0).gameObject;
         child.transform.name = this.name;
@@ -44,7 +44,6 @@ public class Spawner : MonoBehaviour
         NavMeshAgent agent = child.GetComponent<NavMeshAgent>();
         child.GetComponent<EnemyController>().waitTimeSet = 50f/agent.angularSpeed;
         child.transform.localPosition = new Vector3(coordinates[0], 0, coordinates[1]);
-        Debug.Log(coordinates[0]+ " " + coordinates[1]);
         child.GetComponent<EnemyController>().target = FindObjectOfType<Player>().transform;
         NumberOfEnemys++;
         yield return new WaitForSeconds(spawnDelay);

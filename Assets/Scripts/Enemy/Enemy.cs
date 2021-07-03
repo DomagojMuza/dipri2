@@ -68,10 +68,13 @@ public class Enemy : MonoBehaviour
         agent.enabled = false;
         animator.SetBool("isDead", true);
         WaterFloat floater = GetComponent<WaterFloat>();
+        EnemyController controller = GetComponent<EnemyController>();
+        controller.enabled = false;
         floater.AttachToSurface = false;
         yield return new WaitForSeconds(5f);
         Instantiate(chest, gameObject.transform.position, Quaternion.identity);
-        spawner.NumberOfEnemys--;
+        Debug.Log(spawner);
+        if(spawner != null)spawner.NumberOfEnemys--;
         Destroy(transform.parent.gameObject);
 
 

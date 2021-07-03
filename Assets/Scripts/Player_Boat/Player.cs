@@ -60,13 +60,14 @@ public class Player : MonoBehaviour
 
     public void CheckQuest(int addAmount, string typeOfObject)
     {
-        Debug.Log(addAmount + " "+ typeOfObject);
+        
         foreach (Quest quest in QuestLog.MyInstance.quests)
         {
             if (quest.MyComplete == false)
             {
                 foreach (Objective obj in quest.MyCollectObjectives)
                 {
+                    Debug.Log(obj.MyType + " "+ typeOfObject);
                     if (obj.MyType == typeOfObject && !obj.MyComplete)
                     {
                         obj.MyCurrentAmount += addAmount;

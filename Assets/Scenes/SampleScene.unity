@@ -1944,7 +1944,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &310098416
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5852,17 +5852,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 9063717170549912457, guid: 836c17e8234e93d4886239074472a9e3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9063717170549912458, guid: 836c17e8234e93d4886239074472a9e3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1619.2
+      value: 767
       objectReference: {fileID: 0}
     - target: {fileID: 9063717170549912458, guid: 836c17e8234e93d4886239074472a9e3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1300.9
+      value: 1454
       objectReference: {fileID: 0}
     - target: {fileID: 9063717171529902442, guid: 836c17e8234e93d4886239074472a9e3, type: 3}
       propertyPath: m_Name
       value: MiniBoss
+      objectReference: {fileID: 0}
+    - target: {fileID: 9063717171529902442, guid: 836c17e8234e93d4886239074472a9e3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9063717171529902444, guid: 836c17e8234e93d4886239074472a9e3, type: 3}
       propertyPath: m_RootOrder
@@ -7784,7 +7792,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.74333334
   m_BuildHeightMesh: 0
-  m_NavMeshData: {fileID: 23800000, guid: 8701cc3ec5b8ad84cbfb7dc87a72fffd, type: 2}
+  m_NavMeshData: {fileID: 0}
 --- !u!1 &1505135830
 GameObject:
   m_ObjectHideFlags: 0
@@ -9500,10 +9508,10 @@ MonoBehaviour:
   NumberOfEnemys: 0
   waitTime: 0
   name: Pirate
-  xMin: 0
-  xMax: 0
-  zMin: 0
-  zMax: 0
+  xMin: 30
+  xMax: 1140
+  zMin: 500
+  zMax: 1140
 --- !u!4 &1906081754
 Transform:
   m_ObjectHideFlags: 0
@@ -11462,7 +11470,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1591784783262935743, guid: 2bf10f278acfd344dbbe5e9cca5bc407, type: 3}
       propertyPath: storyline.Array.size
-      value: 7
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1591784783262935743, guid: 2bf10f278acfd344dbbe5e9cca5bc407, type: 3}
+      propertyPath: storyline.Array.data[3].x
+      value: 530
+      objectReference: {fileID: 0}
+    - target: {fileID: 1591784783262935743, guid: 2bf10f278acfd344dbbe5e9cca5bc407, type: 3}
+      propertyPath: storyline.Array.data[3].z
+      value: 1220
       objectReference: {fileID: 0}
     - target: {fileID: 1591784783262935743, guid: 2bf10f278acfd344dbbe5e9cca5bc407, type: 3}
       propertyPath: storyline.Array.data[4].x
@@ -11474,19 +11490,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1591784783262935743, guid: 2bf10f278acfd344dbbe5e9cca5bc407, type: 3}
       propertyPath: storyline.Array.data[5].x
-      value: 858
+      value: 1627
       objectReference: {fileID: 0}
     - target: {fileID: 1591784783262935743, guid: 2bf10f278acfd344dbbe5e9cca5bc407, type: 3}
       propertyPath: storyline.Array.data[5].z
-      value: 288
+      value: 615
       objectReference: {fileID: 0}
     - target: {fileID: 1591784783262935743, guid: 2bf10f278acfd344dbbe5e9cca5bc407, type: 3}
       propertyPath: storyline.Array.data[6].x
-      value: 1620
+      value: 1650
       objectReference: {fileID: 0}
     - target: {fileID: 1591784783262935743, guid: 2bf10f278acfd344dbbe5e9cca5bc407, type: 3}
       propertyPath: storyline.Array.data[6].z
-      value: 1300
+      value: 1215
+      objectReference: {fileID: 0}
+    - target: {fileID: 1591784783262935743, guid: 2bf10f278acfd344dbbe5e9cca5bc407, type: 3}
+      propertyPath: storyline.Array.data[7].x
+      value: 1390
+      objectReference: {fileID: 0}
+    - target: {fileID: 1591784783262935743, guid: 2bf10f278acfd344dbbe5e9cca5bc407, type: 3}
+      propertyPath: storyline.Array.data[7].z
+      value: 1690
+      objectReference: {fileID: 0}
+    - target: {fileID: 1591784783262935743, guid: 2bf10f278acfd344dbbe5e9cca5bc407, type: 3}
+      propertyPath: storyline.Array.data[2].tag
+      value: Talk to friend
       objectReference: {fileID: 0}
     - target: {fileID: 1591784783262935743, guid: 2bf10f278acfd344dbbe5e9cca5bc407, type: 3}
       propertyPath: storyline.Array.data[4].npc
@@ -11494,7 +11522,7 @@ PrefabInstance:
       objectReference: {fileID: 3387363768798464910, guid: 14c14db5ce2e541478bf7fe5f5cb6cac, type: 3}
     - target: {fileID: 1591784783262935743, guid: 2bf10f278acfd344dbbe5e9cca5bc407, type: 3}
       propertyPath: storyline.Array.data[4].tag
-      value: Jesper
+      value: Jasper
       objectReference: {fileID: 0}
     - target: {fileID: 1591784783262935743, guid: 2bf10f278acfd344dbbe5e9cca5bc407, type: 3}
       propertyPath: storyline.Array.data[5].npc
@@ -11511,6 +11539,14 @@ PrefabInstance:
     - target: {fileID: 1591784783262935743, guid: 2bf10f278acfd344dbbe5e9cca5bc407, type: 3}
       propertyPath: storyline.Array.data[6].tag
       value: Mini Boss
+      objectReference: {fileID: 0}
+    - target: {fileID: 1591784783262935743, guid: 2bf10f278acfd344dbbe5e9cca5bc407, type: 3}
+      propertyPath: storyline.Array.data[7].npc
+      value: 
+      objectReference: {fileID: 3387363768798464910, guid: bbe548f87035451469664925d21b0c3e, type: 3}
+    - target: {fileID: 1591784783262935743, guid: 2bf10f278acfd344dbbe5e9cca5bc407, type: 3}
+      propertyPath: storyline.Array.data[7].tag
+      value: Jasper 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2bf10f278acfd344dbbe5e9cca5bc407, type: 3}
