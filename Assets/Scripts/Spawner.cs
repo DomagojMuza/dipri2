@@ -8,7 +8,8 @@ public class Spawner : MonoBehaviour
     public float spawnDelay;
     public GameObject spawnee;
     public int NumberOfEnemys;
-    public int waitTime;
+
+    public int HowManyToSpawn;
     public string name;
 
     public int xMin;
@@ -23,7 +24,7 @@ public class Spawner : MonoBehaviour
 
     void Update()
     {   
-        if (NumberOfEnemys < 5 && spawnAvailble) StartCoroutine(Spawn());
+        if (NumberOfEnemys < HowManyToSpawn && spawnAvailble) StartCoroutine(Spawn());
     }
 
     IEnumerator Spawn()

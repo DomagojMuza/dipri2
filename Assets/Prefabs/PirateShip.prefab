@@ -58,7 +58,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 200
+  far clip plane: 1000
   field of view: 60
   orthographic: 0
   orthographic size: 5
@@ -260,10 +260,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Motor: {fileID: 1797314406841593238}
-  SteerPower: 3000
-  Power: 500
-  MaxSpeed: 20
-  Drag: 0.1
+  SteerPower: 6000
+  Power: 600
+  MaxSpeed: 21
+  Drag: 2
 --- !u!114 &1797314406264721134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -279,7 +279,6 @@ MonoBehaviour:
   goldAmount: 0
   image: {fileID: 0}
   HP: 0
-  maxHP: 0
 --- !u!65 &1797314406264721135
 BoxCollider:
   m_ObjectHideFlags: 0

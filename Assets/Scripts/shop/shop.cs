@@ -19,7 +19,6 @@ public class shop : MonoBehaviour
     public Button button6;
     public Button button7;
 
-    public float dmgLVL = 1;
     // Start is called before the first frame update
     void Start()
     {
@@ -69,7 +68,7 @@ public class shop : MonoBehaviour
             ScoreManager.instance.ChangeCoinsScore(MyPlayer.goldAmount);
             cannon1.cannonballDmg +=5;
             cannon2.cannonballDmg = cannon1.cannonballDmg;
-            dmgLVL+= 0.5f;
+            MyPlayer.dmgLVL+= 0.5f;
         }
         
     }
@@ -82,7 +81,7 @@ public class shop : MonoBehaviour
             ScoreManager.instance.ChangeCoinsScore(MyPlayer.goldAmount);
             cannon1.cannonballDmg +=12;
             cannon2.cannonballDmg = cannon1.cannonballDmg;
-            dmgLVL+= 1f;
+            MyPlayer.dmgLVL+= 1f;
         }
         
     }

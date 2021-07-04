@@ -2131,7 +2131,7 @@ GameObject:
   - component: {fileID: 1184045820880757704}
   - component: {fileID: 3669923215854691766}
   m_Layer: 7
-  m_Name: Jasper
+  m_Name: Jasper 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2226,33 +2226,29 @@ MonoBehaviour:
   destroy: 1
   questDialog:
     recenice:
-    - I see you got my chest
-    - Now if you would be so kind and do just one little task...
-    - How about I kill you right now?
-    - Remeber, without me you can't lure Branton out so just listen and do this last
-      simple task.  There is Island South od here and some people own me money, and
-      you job is simple, go, scare them and maybe kill somebody, that depends on
-      you.
-    - 'Fine, but this better be the last thing I do for you!
+    - '*BANG* *BANG*
 
-'
-    - Yes, yes, now go, please.
-    - ... (This better pay off or he's dead man)
+      You almost got me killed, give me one good reason not
+      to kill you right now.'
+    - Well because the ship you destroyed belonged to Bretons nephew and now that
+      he is dead he'll surely come to find you. You are WELCOME.
+    - And how did you know that that was an ambush??
+    - I know all Florance. Now go Breton is waiting for you.
   normalDialog:
     recenice:
-    - Remember, island South of here
+    - Go, before he leaves.
   questRelated: 1
   npcImage: {fileID: 0}
   open: 0
   quests:
-  - title: Scare people
-    description: Jasper want's you to scare some pepole South of him on some island
+  - title: Kill Breton
+    description: Breton is looking for you, go and kill him
     collectObjectives:
     - amount: 1
-      type: Scare people
+      type: BretonBoss
     nextQuestNPC: 1
-    questAfterQuest: 0
-    questAfterQuestPosition: 0
+    questAfterQuest: 1
+    questAfterQuestPosition: 4
 --- !u!1 &3387363768798469688
 GameObject:
   m_ObjectHideFlags: 0

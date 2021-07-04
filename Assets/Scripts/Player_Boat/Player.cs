@@ -20,6 +20,8 @@ public class Player : MonoBehaviour
 
     public float HP;
 
+    public float dmgLVL = 1;
+
     private static Player instance;
 
     public static Player MyInstance

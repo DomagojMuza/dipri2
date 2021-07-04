@@ -35,7 +35,7 @@ public class Storyline : MonoBehaviour
     public void SpawnStory(){
         Story s = storyQueue.Dequeue();
 
-        if(s.tag == "Mini Boss"){
+        if(s.tag.Contains("Boss")){
             Debug.Log("Mini boss spawn");
             GameObject spawn = Instantiate(s.npc, new Vector3(0, 0, -450), Quaternion.identity);
             GameObject child = spawn.transform.GetChild(0).gameObject;

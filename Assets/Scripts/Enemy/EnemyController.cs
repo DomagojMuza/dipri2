@@ -48,7 +48,7 @@ public class EnemyController : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         enemy = GetComponent<Enemy>();
-        Damage = FindObjectOfType<Player>().HP * Mathf.Sqrt(FindObjectOfType<shop>().dmgLVL);
+        Damage = FindObjectOfType<Player>().HP * Mathf.Sqrt(FindObjectOfType<Player>().dmgLVL);
 
     }
 
@@ -58,8 +58,8 @@ public class EnemyController : MonoBehaviour
         float distance = Vector3.Distance(target.position, transform.position);
 
 
-        if (distance > 90 && !orbit && enemy.HP > 0) Patroling();
-        if (distance <= 90 && !orbit && enemy.HP > 0) Chase();
+        if (distance > 130 && !orbit && enemy.HP > 0) Patroling();
+        if (distance <= 130 && distance > (lookRadius + 2) && !orbit && enemy.HP > 0) Chase();
         if (distance <= lookRadius && enemy.HP > 0) 
         {
             Attack();
