@@ -19,6 +19,7 @@ public class Quest
     private bool complete;
 
     public bool nextQuestNPC;
+    public bool unlockMap;
     public bool questAfterQuest;
     public int questAfterQuestPosition;
 
@@ -51,10 +52,15 @@ public class Quest
 
     public void QuestEvaluate()
     {Debug.Log("Next quest " + MyTitle);
+        if(unlockMap){
+           GameObject mapSeparator =  GameObject.FindGameObjectWithTag("MapLocker1");
+           mapSeparator.SetActive(false);
+        }
         if(nextQuestNPC){
             Debug.Log("Spawn " + MyTitle);
             Storyline.MyInstance.SpawnStory();
         }
+        
     }
 
    

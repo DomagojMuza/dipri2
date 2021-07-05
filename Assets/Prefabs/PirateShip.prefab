@@ -279,6 +279,7 @@ MonoBehaviour:
   goldAmount: 0
   image: {fileID: 0}
   HP: 0
+  dmgLVL: 1
 --- !u!65 &1797314406264721135
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -488,7 +489,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BlastPower: 100
-  cannonballDmg: 14
+  cannonballDmg: 12
   Cannonball: {fileID: 5902321101475063141, guid: 9cee2ab057a12a2448bf0eb141eda736, type: 3}
   placeholder: {fileID: 0}
   key: 0
@@ -598,7 +599,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BlastPower: 100
-  cannonballDmg: 14
+  cannonballDmg: 12
   Cannonball: {fileID: 5902321101475063141, guid: 9cee2ab057a12a2448bf0eb141eda736, type: 3}
   placeholder: {fileID: 0}
   key: 1

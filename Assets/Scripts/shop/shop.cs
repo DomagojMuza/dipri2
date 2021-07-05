@@ -66,7 +66,7 @@ public class shop : MonoBehaviour
         if(MyPlayer.goldAmount >= 10000){
             MyPlayer.goldAmount -= 10000;
             ScoreManager.instance.ChangeCoinsScore(MyPlayer.goldAmount);
-            cannon1.cannonballDmg +=5;
+            cannon1.cannonballDmg +=2;
             cannon2.cannonballDmg = cannon1.cannonballDmg;
             MyPlayer.dmgLVL+= 0.5f;
         }
@@ -79,7 +79,7 @@ public class shop : MonoBehaviour
         if(MyPlayer.goldAmount >= 20000){
             MyPlayer.goldAmount -= 20000;
             ScoreManager.instance.ChangeCoinsScore(MyPlayer.goldAmount);
-            cannon1.cannonballDmg +=12;
+            cannon1.cannonballDmg +=5;
             cannon2.cannonballDmg = cannon1.cannonballDmg;
             MyPlayer.dmgLVL+= 1f;
         }
@@ -92,8 +92,8 @@ public class shop : MonoBehaviour
             if(MyPlayer.goldAmount >= 5000){
                 MyPlayer.goldAmount -= 5000;
                 ScoreManager.instance.ChangeCoinsScore(MyPlayer.goldAmount);
-                MyPlayer.HP +=5;
-                MyPlayer.addHP(5);
+                MyPlayer.HP +=10;
+                MyPlayer.addHP(10);
             }
         }    
         else{
@@ -108,8 +108,8 @@ public class shop : MonoBehaviour
             if(MyPlayer.goldAmount >= 10000){
                 MyPlayer.goldAmount -= 10000;
                 ScoreManager.instance.ChangeCoinsScore(MyPlayer.goldAmount);
-                MyPlayer.HP +=12;
-                MyPlayer.addHP(12);
+                MyPlayer.HP +=17;
+                MyPlayer.addHP(17);
             }
         }    
         else{

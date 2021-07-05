@@ -1267,7 +1267,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8777dbfe52b8eb43a1868974c8a505a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 120
+  HP: 180
   ex: {fileID: 3334155785200811830, guid: e32c61d2268c933409128a0186afe542, type: 3}
   chest: {fileID: 874090660037961841, guid: bb6f9c720bad093479419ce9371b16f2, type: 3}
   animator: {fileID: 0}
@@ -1283,7 +1283,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 18
-  m_Speed: 11
+  m_Speed: 10
   m_Acceleration: 10
   avoidancePriority: 50
   m_AngularSpeed: 24
@@ -1314,7 +1314,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 16
   walkPoint: {x: 0, y: 0, z: 0}
-  walkPointRange: 0
+  walkPointRange: 20
   leftCannons: {fileID: 9063717170824382433}
   rightCannons: {fileID: 9063717170599811535}
   waitTimeSet: 0

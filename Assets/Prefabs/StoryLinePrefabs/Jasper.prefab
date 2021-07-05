@@ -2242,7 +2242,7 @@ MonoBehaviour:
     recenice:
     - Remember, island South of here
   questRelated: 1
-  npcImage: {fileID: 0}
+  npcImage: {fileID: 21300000, guid: be8ce9c126fa95549bfc785d72b5ca22, type: 3}
   open: 0
   quests:
   - title: Scare people
@@ -2251,6 +2251,7 @@ MonoBehaviour:
     - amount: 1
       type: Scare people
     nextQuestNPC: 1
+    unlockMap: 0
     questAfterQuest: 0
     questAfterQuestPosition: 0
 --- !u!1 &3387363768798469688

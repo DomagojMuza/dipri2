@@ -35,14 +35,15 @@ public class Storyline : MonoBehaviour
     public void SpawnStory(){
         Story s = storyQueue.Dequeue();
 
-        if(s.tag.Contains("Boss")){
-            Debug.Log("Mini boss spawn");
+        if(s.tag.Contains("Boss")){         
             GameObject spawn = Instantiate(s.npc, new Vector3(0, 0, -450), Quaternion.identity);
             GameObject child = spawn.transform.GetChild(0).gameObject;
             child.transform.name = s.tag;
             NavMeshAgent agent = child.GetComponent<NavMeshAgent>();
             child.GetComponent<EnemyController>().waitTimeSet = 50f/agent.angularSpeed;
             child.transform.localPosition = new Vector3(s.x, 0, s.z);
+            child.transform.localPosition = new Vector3(s.x, 0, s.z);
+            agent.SetDestination(new Vector3(s.x, 0, s.z));
             child.GetComponent<EnemyController>().target = FindObjectOfType<Player>().transform;
         }else{
             GameObject spawn = Instantiate(s.npc, new Vector3(s.x, 0, s.z), Quaternion.identity);
