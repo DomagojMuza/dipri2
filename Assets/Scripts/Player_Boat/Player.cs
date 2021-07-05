@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     
 
     private CannonController[] cannons;
+    private GameObject canvasWarning;
     public int goldAmount;
 
     public Image image;
@@ -47,9 +48,12 @@ public class Player : MonoBehaviour
     public void Awake()
     {
         HP = 100;
+        canvasWarning = GameObject.FindGameObjectWithTag("MapWarning");
+        canvasWarning.SetActive(false);
         cannons = gameObject.GetComponentsInChildren<CannonController>();
         hpBar hp = FindObjectOfType<hpBar>();
         image = hp.GetComponent<Image>();
+        
     }
 
     public void AddGold(int goldAmount)
@@ -131,6 +135,17 @@ public class Player : MonoBehaviour
     
     	        SceneManager.LoadScene(sceneToLoad);
             }
+        } else if (other.tag == "MapTrigger")
+        {
+            canvasWarning.SetActive(true);
+        }
+    }
+
+    public void OnTriggerExit(Collider other)
+    {
+        if(other.tag == "MapTrigger")
+        {
+            canvasWarning.SetActive(false);
         }
     }
 

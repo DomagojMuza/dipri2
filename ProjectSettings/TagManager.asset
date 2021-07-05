@@ -7,6 +7,9 @@ TagManager:
   - QuestGiver
   - Cannonball
   - InteractText
+  - MapLocker1
+  - MapTrigger
+  - MapWarning
   layers:
   - Default
   - TransparentFX
