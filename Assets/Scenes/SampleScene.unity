@@ -4345,6 +4345,15 @@ MonoBehaviour:
   - textureIndex: 0
     startingHeight: 0
     overlap: 5
+  - textureIndex: 1
+    startingHeight: 10
+    overlap: 10
+  - textureIndex: 2
+    startingHeight: 40
+    overlap: 10
+  - textureIndex: 3
+    startingHeight: 150
+    overlap: 5
 --- !u!154 &776762142
 TerrainCollider:
   m_ObjectHideFlags: 0
