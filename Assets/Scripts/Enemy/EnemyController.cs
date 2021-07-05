@@ -48,7 +48,7 @@ public class EnemyController : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         enemy = GetComponent<Enemy>();
-        Damage = FindObjectOfType<Player>().HP * Mathf.Sqrt(FindObjectOfType<Player>().dmgLVL);
+        Damage = Damage * Mathf.Sqrt(FindObjectOfType<Player>().dmgLVL);
 
     }
 

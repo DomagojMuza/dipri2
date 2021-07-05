@@ -1309,7 +1309,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lookRadius: 50
   target: {fileID: 0}
-  Damage: 7
+  Damage: 6
   whatIsWater:
     serializedVersion: 2
     m_Bits: 16
