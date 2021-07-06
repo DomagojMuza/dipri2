@@ -63,8 +63,8 @@ public class shop : MonoBehaviour
     void BuyDmgSmall()
     {
         
-        if(MyPlayer.goldAmount >= 10000){
-            MyPlayer.goldAmount -= 10000;
+        if(MyPlayer.goldAmount >= 8000){
+            MyPlayer.goldAmount -= 8000;
             ScoreManager.instance.ChangeCoinsScore(MyPlayer.goldAmount);
             cannon1.cannonballDmg +=2;
             cannon2.cannonballDmg = cannon1.cannonballDmg;
@@ -76,8 +76,8 @@ public class shop : MonoBehaviour
     void BuyDmgBig()
     {
         
-        if(MyPlayer.goldAmount >= 20000){
-            MyPlayer.goldAmount -= 20000;
+        if(MyPlayer.goldAmount >= 16000){
+            MyPlayer.goldAmount -= 16000;
             ScoreManager.instance.ChangeCoinsScore(MyPlayer.goldAmount);
             cannon1.cannonballDmg +=5;
             cannon2.cannonballDmg = cannon1.cannonballDmg;
@@ -89,8 +89,8 @@ public class shop : MonoBehaviour
     void BuyHPSmall()
     {
         if(MyPlayer.HP < 100){
-            if(MyPlayer.goldAmount >= 5000){
-                MyPlayer.goldAmount -= 5000;
+            if(MyPlayer.goldAmount >= 3500){
+                MyPlayer.goldAmount -= 3500;
                 ScoreManager.instance.ChangeCoinsScore(MyPlayer.goldAmount);
                 MyPlayer.HP +=10;
                 MyPlayer.addHP(10);
@@ -105,8 +105,8 @@ public class shop : MonoBehaviour
     void BuyHPBig()
     {
         if(MyPlayer.HP < 100){
-            if(MyPlayer.goldAmount >= 10000){
-                MyPlayer.goldAmount -= 10000;
+            if(MyPlayer.goldAmount >= 6000){
+                MyPlayer.goldAmount -= 6000;
                 ScoreManager.instance.ChangeCoinsScore(MyPlayer.goldAmount);
                 MyPlayer.HP +=17;
                 MyPlayer.addHP(17);

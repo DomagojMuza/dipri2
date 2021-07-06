@@ -9,7 +9,7 @@ public class Chest : Destroyble
     // Start is called before the first frame update
     void Start()
     {
-        gold = Random.Range(100, 3000);
+        gold = Random.Range(900, 4000);
         GetComponent<AudioSource>().playOnAwake = false;
     }
 

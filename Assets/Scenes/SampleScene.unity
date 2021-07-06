@@ -2482,7 +2482,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6729434387901996090, guid: 93153f86bd8192047be511d30eced7f0, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6729434387901996090, guid: 93153f86bd8192047be511d30eced7f0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2896,7 +2896,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &310098416
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5874,6 +5874,20 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 24
       objectReference: {fileID: 0}
+    - target: {fileID: 2835926217627736533, guid: 237e7e0dc4d64534aab05746be5cfeb3, type: 3}
+      propertyPath: m_Text
+      value: '    8000
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2835926217679010904, guid: 237e7e0dc4d64534aab05746be5cfeb3, type: 3}
+      propertyPath: m_Text
+      value: '    16000'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2835926217862916142, guid: 237e7e0dc4d64534aab05746be5cfeb3, type: 3}
+      propertyPath: m_Text
+      value: '    3500'
+      objectReference: {fileID: 0}
     - target: {fileID: 2835926217908653190, guid: 237e7e0dc4d64534aab05746be5cfeb3, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -5968,7 +5982,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2835926217959577317, guid: 237e7e0dc4d64534aab05746be5cfeb3, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2835926219211675748, guid: 237e7e0dc4d64534aab05746be5cfeb3, type: 3}
+      propertyPath: m_Text
+      value: '    6000'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 237e7e0dc4d64534aab05746be5cfeb3, type: 3}
@@ -7143,7 +7161,7 @@ GameObject:
   - component: {fileID: 998187810}
   - component: {fileID: 998187811}
   m_Layer: 0
-  m_Name: Spawner (1)
+  m_Name: Marine Spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7176,10 +7194,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnDelay: 7
-  spawnee: {fileID: 9063717171529902442, guid: 1e836539006799a4e83470366f744536, type: 3}
+  spawnee: {fileID: 9063717171529902442, guid: a9fa1ea1e14d81842bdc805c33fa4297, type: 3}
   NumberOfEnemys: 0
-  HowManyToSpawn: 2
-  name: Pirate
+  HowManyToSpawn: 3
+  name: Marine
   xMin: 90
   xMax: 370
   zMin: 1500
@@ -7832,6 +7850,58 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: e344706ca84190047a0f46a11890aae9, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9545842e6287b6488728d8e962644c6, type: 3}
+--- !u!1 &1084858118
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1084858119}
+  - component: {fileID: 1084858121}
+  m_Layer: 0
+  m_Name: Merchant Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &1084858119
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1084858118}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 232, y: 22.763092, z: -943}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1329060179}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1084858121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1084858118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 353dd2bb1b06a3f43ac443374e76d696, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnDelay: 7
+  spawnee: {fileID: 9063717171529902442, guid: 07d5f913cc4054d4793923a29eba9f1e, type: 3}
+  NumberOfEnemys: 0
+  HowManyToSpawn: 3
+  name: Merchant
+  xMin: 230
+  xMax: 500
+  zMin: -940
+  zMax: -370
 --- !u!1 &1087106703
 GameObject:
   m_ObjectHideFlags: 0
@@ -8424,58 +8494,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 060d000557fda73428e416006e69e7c8, type: 3}
   m_PrefabInstance: {fileID: 1907542653}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1160595887
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1160595888}
-  - component: {fileID: 1160595889}
-  m_Layer: 0
-  m_Name: Spawner (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
---- !u!4 &1160595888
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1160595887}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -739, y: 22.763092, z: -2413}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1329060179}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1160595889
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1160595887}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ae03ff18fe288e4d9c63d26850ef9b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnDelay: 10
-  spawnee: {fileID: 9063717171529902442, guid: 1e836539006799a4e83470366f744536, type: 3}
-  NumberOfEnemys: 0
-  HowManyToSpawn: 8
-  name: Pirate
-  xMin: 30
-  xMax: 1140
-  zMin: 500
-  zMax: 1140
 --- !u!1 &1166314972
 GameObject:
   m_ObjectHideFlags: 0
@@ -9632,7 +9650,7 @@ Transform:
   - {fileID: 1495466683}
   - {fileID: 1906081754}
   - {fileID: 998187810}
-  - {fileID: 1160595888}
+  - {fileID: 1084858119}
   - {fileID: 1296339481}
   - {fileID: 268088494}
   m_Father: {fileID: 0}
@@ -14045,7 +14063,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1887074586
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14312,7 +14330,7 @@ GameObject:
   - component: {fileID: 1906081754}
   - component: {fileID: 1906081753}
   m_Layer: 0
-  m_Name: Spawner
+  m_Name: 'Pirate Spawner '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14333,7 +14351,7 @@ MonoBehaviour:
   spawnDelay: 10
   spawnee: {fileID: 9063717171529902442, guid: 1e836539006799a4e83470366f744536, type: 3}
   NumberOfEnemys: 0
-  HowManyToSpawn: 8
+  HowManyToSpawn: 5
   name: Pirate
   xMin: 30
   xMax: 1140
