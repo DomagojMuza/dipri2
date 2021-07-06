@@ -60,6 +60,8 @@ public class Enemy : MonoBehaviour
 
     IEnumerator death()
     {
+
+        Debug.Log("MERCHANT");  
         dead = true;
         Player.MyInstance.CheckQuest(1, gameObject.name);
         agent.speed = 0f;
@@ -69,7 +71,8 @@ public class Enemy : MonoBehaviour
         animator.SetBool("isDead", true);
         WaterFloat floater = GetComponent<WaterFloat>();
         EnemyController controller = GetComponent<EnemyController>();
-        controller.enabled = false;
+        if(controller != null) controller.enabled = false;
+        
         floater.AttachToSurface = false;
         yield return new WaitForSeconds(5f);
         Instantiate(chest, gameObject.transform.position, Quaternion.identity);

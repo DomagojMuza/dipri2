@@ -2249,7 +2249,7 @@ MonoBehaviour:
       type: BretonBoss
     nextQuestNPC: 1
     unlockMap: 1
-    questAfterQuest: 0
+    questAfterQuest: 1
     questAfterQuestPosition: 4
 --- !u!1 &3387363768798469688
 GameObject:

@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6158645823958512042
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6158645823958512039}
+  - component: {fileID: 6158645823958512036}
+  - component: {fileID: 6158645823958512037}
+  m_Layer: 0
+  m_Name: BratonTalk
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6158645823958512039
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6158645823958512042}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 703.9, y: 0, z: 936.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &6158645823958512036
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6158645823958512042}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 96.2536, y: 5, z: 76.961365}
+  m_Center: {x: -13.196503, y: 0, z: -0.3206482}
+--- !u!114 &6158645823958512037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6158645823958512042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 484324c330a805f4ea474010dc4e7cd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroy: 0
+  questDialog:
+    recenice: []
+  normalDialog:
+    recenice:
+    - WHERE IS MY SISTER?!
+    - Hahahaha, what makes you think that I would tell you anyhting?
+    - Glad that you asked. NOW YOU WILL SEE....
+    - '*Few hours later*'
+    - Please Florance... Stop... I'll tell... You... Whatever you... Want... To know
+    - WHERE IS MY SISTER???
+    - I... don't know... find Elizabeth Brown... she should...
+    - On, now know, TELL ME!
+    - ....
+    - AAAAAAAAAAAAA!!
+    - 
+    - Guess now i need to find Elizabeth
+  questRelated: 1
+  npcImage: {fileID: 21300000, guid: 9c08824caa22e424eb785f5c9c4271da, type: 3}
+  open: 0
+  quests: []

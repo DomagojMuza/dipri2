@@ -5982,7 +5982,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2835926217959577317, guid: 237e7e0dc4d64534aab05746be5cfeb3, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2835926219211675748, guid: 237e7e0dc4d64534aab05746be5cfeb3, type: 3}
       propertyPath: m_Text
@@ -16453,7 +16453,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1591784783262935743, guid: 2bf10f278acfd344dbbe5e9cca5bc407, type: 3}
       propertyPath: storyline.Array.size
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1591784783262935743, guid: 2bf10f278acfd344dbbe5e9cca5bc407, type: 3}
       propertyPath: storyline.Array.data[3].x
@@ -16504,6 +16504,14 @@ PrefabInstance:
       value: -570
       objectReference: {fileID: 0}
     - target: {fileID: 1591784783262935743, guid: 2bf10f278acfd344dbbe5e9cca5bc407, type: 3}
+      propertyPath: storyline.Array.data[9].x
+      value: 1140
+      objectReference: {fileID: 0}
+    - target: {fileID: 1591784783262935743, guid: 2bf10f278acfd344dbbe5e9cca5bc407, type: 3}
+      propertyPath: storyline.Array.data[9].z
+      value: -570
+      objectReference: {fileID: 0}
+    - target: {fileID: 1591784783262935743, guid: 2bf10f278acfd344dbbe5e9cca5bc407, type: 3}
       propertyPath: storyline.Array.data[2].tag
       value: Talk to friend
       objectReference: {fileID: 0}
@@ -16546,6 +16554,14 @@ PrefabInstance:
     - target: {fileID: 1591784783262935743, guid: 2bf10f278acfd344dbbe5e9cca5bc407, type: 3}
       propertyPath: storyline.Array.data[8].tag
       value: BratonBoss
+      objectReference: {fileID: 0}
+    - target: {fileID: 1591784783262935743, guid: 2bf10f278acfd344dbbe5e9cca5bc407, type: 3}
+      propertyPath: storyline.Array.data[9].npc
+      value: 
+      objectReference: {fileID: 6158645823958512042, guid: 30dcc8463f30c7c4b9fb7a90eecaaf11, type: 3}
+    - target: {fileID: 1591784783262935743, guid: 2bf10f278acfd344dbbe5e9cca5bc407, type: 3}
+      propertyPath: storyline.Array.data[9].tag
+      value: BratonTalk
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2bf10f278acfd344dbbe5e9cca5bc407, type: 3}
@@ -16769,7 +16785,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4179429189238787825, guid: 857e16318a83bfb4f906c943712c93bb, type: 3}
       propertyPath: QuestsAfterQuest.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4179429189238787825, guid: 857e16318a83bfb4f906c943712c93bb, type: 3}
       propertyPath: QuestsAfterQuest.Array.data[3].title
@@ -16777,7 +16793,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4179429189238787825, guid: 857e16318a83bfb4f906c943712c93bb, type: 3}
       propertyPath: QuestsAfterQuest.Array.data[4].title
-      value: Talk to Breton
+      value: Talk to Barton
       objectReference: {fileID: 0}
     - target: {fileID: 4179429189238787825, guid: 857e16318a83bfb4f906c943712c93bb, type: 3}
       propertyPath: QuestsAfterQuest.Array.data[0].description
@@ -16793,7 +16809,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4179429189238787825, guid: 857e16318a83bfb4f906c943712c93bb, type: 3}
       propertyPath: QuestsAfterQuest.Array.data[4].description
-      value: Talk to Breton
+      value: Go to the port where you found Barton and talk to him
       objectReference: {fileID: 0}
     - target: {fileID: 4179429189238787825, guid: 857e16318a83bfb4f906c943712c93bb, type: 3}
       propertyPath: QuestsAfterQuest.Array.data[1].nextQuestNPC
@@ -16829,7 +16845,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4179429189238787825, guid: 857e16318a83bfb4f906c943712c93bb, type: 3}
       propertyPath: QuestsAfterQuest.Array.data[4].collectObjectives.Array.data[0].type
-      value: BretonBossTalk
+      value: BartonTalk
       objectReference: {fileID: 0}
     - target: {fileID: 4179429189238787825, guid: 857e16318a83bfb4f906c943712c93bb, type: 3}
       propertyPath: QuestsAfterQuest.Array.data[3].collectObjectives.Array.data[0].amount
